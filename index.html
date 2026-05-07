@@ -14,7 +14,7 @@ Data: 06/05/2026
 <head>
     <meta charset="UTF-8">
     <title>Formulário Completo</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <script src="script.js" defer></script>
 </head>
 
@@ -47,23 +47,26 @@ Data: 06/05/2026
                     <legend>Informações</legend>
 
                     <p>Gênero</p>
-                    <input type="radio" name="genero" id="masc" value="masculino">
+                    <input type="radio" name="genero" id="masc" value="masculino" required>
                     <label for="masc">Masculino</label>
                     <input type="radio" name="genero" id="fem" value="feminino">
                     <label for="fem">Feminino</label>
-                    <input type="radio" name="genero" id="out" value="outro">
-                    <label for="out">Outro</label>
+                    <input type="radio" name="genero" id="outro" value="outro">
+                    <label for="outro">Outro</label>
 
+                    <hr>
                     <p>Interesses</p>
-                    <label for="tecnologia">Tecnologia</label>
-                    <input type="checkbox" name="interesses" id="tecnologia">
-                    <label for="esportes">Esportes</label>
-                    <input type="checkbox" name="interesses" id="esportes">
-                    <label for="musica">Música</label>
-                    <input type="checkbox" name="interesses" id="musica">
-                    <label for="jogos">Jogos</label>
-                    <input type="checkbox" name="interesses" id="jogos">
 
+                    <input type="checkbox" name="interesses" id="tecnologia" value="tecnologia">
+                    <label for="tecnologia">Tecnologia</label>
+                    <input type="checkbox" name="interesses" id="esportes" value="esportes">
+                    <label for="esportes">Esportes</label>
+                    <input type="checkbox" name="interesses" id="musica" value="musica">
+                    <label for="musica">Música</label>
+                    <input type="checkbox" name="interesses" id="jogos" value="jogos">
+                    <label for="jogos">Jogos</label>
+
+                    <hr>
                     <p>Estado</p>
                     <select name="estado" id="estado" placeholder="Selecione">
                         <option value="nulo"></option>
@@ -73,8 +76,9 @@ Data: 06/05/2026
                         <option value="rj">Rio de Janeiro</option>
                     </select>
 
+                    <hr>
                     <p>Mensagem</p>
-                    <input type="text">
+                    <textarea name="mensagem" id="mensagem"></textarea>
 
                     <p>Upload de Imagem</p>
                     <form action="#" method="POST" enctype="multipart/form-data">
