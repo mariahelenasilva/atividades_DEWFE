@@ -43,6 +43,48 @@ Data: 06/05/2026
                     <input type="date" id="dataNascimento" name="dataNascimento" required>
 
                 </fieldset>
+                <fieldset>
+                    <legend>Informações</legend>
+
+                    <p>Gênero</p>
+                    <input type="radio" name="genero" id="masc" value="masculino">
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="genero" id="fem" value="feminino">
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="genero" id="out" value="outro">
+                    <label for="out">Outro</label>
+
+                    <p>Interesses</p>
+                    <label for="tecnologia">Tecnologia</label>
+                    <input type="checkbox" name="interesses" id="tecnologia">
+                    <label for="esportes">Esportes</label>
+                    <input type="checkbox" name="interesses" id="esportes">
+                    <label for="musica">Música</label>
+                    <input type="checkbox" name="interesses" id="musica">
+                    <label for="jogos">Jogos</label>
+                    <input type="checkbox" name="interesses" id="jogos">
+
+                    <p>Estado</p>
+                    <select name="estado" id="estado" placeholder="Selecione">
+                        <option value="nulo"></option>
+                        <option value="sp">São Paulo</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="es">Espirito Santo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                    </select>
+
+                    <p>Mensagem</p>
+                    <input type="text">
+
+                    <p>Upload de Imagem</p>
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <input type="file" id="arquivo" name="arquivo" accept=".png, .jpg, .jpeg" required>
+                        <br><br>
+                        <button type="reset">Limpar</button>
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                </fieldset>
             </form>
         </section>
 
