@@ -20,12 +20,16 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+/* alterei para column e quando for desktop fica row*/
 /* MENU SEMPRE VISÍVEL */
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
+
+    @media (min-width: 480px) {
+        flex-direction: row;
+    }
 }
 
 nav a {
@@ -49,7 +53,6 @@ nav a {
 /* alterações - flex-direcion: row para column */
 /* CONTAINER EM LINHA */
 .container {
-    display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
@@ -71,7 +74,7 @@ nav a {
 /* alterações - display: block para none */
 /* TEXTO SEMPRE VISÍVEL */
 .box p {
-    display: none;
+    display: block;
 }
 
 /* FOOTER */
