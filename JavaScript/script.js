@@ -6,13 +6,12 @@
  * 
 */
 
-
-    
+const listaTarefas = document.getElementById('lista_tarefas');
+const mensagemElement = document.getElementById('mensagem');
 
 function adicionarTarefa() {
+    console.log('Adicionar Tarefa');
     const inputElement = document.getElementById('nova_tarefa');
-    const mensagemElement = document.getElementById('mensagem');
-    const listaTarefas = document.getElementById('lista_tarefas');
     //receber o valor digitado no input
     let tarefa = inputElement.value; //string 
     let mensagem, cor;
@@ -26,9 +25,12 @@ function adicionarTarefa() {
         let novaTarefa = document.createElement('li');
         novaTarefa.textContent = tarefa;
         listaTarefas.appendChild(novaTarefa);
-        
+
         mensagem = 'Adicionado com sucesso!';
         cor = 'green';
+
+        //contador++;
+        //mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + listaTarefas.children.length + ')';
 
         contaTarefas(listaTarefas);
     } else {
@@ -49,8 +51,38 @@ function tarefaValida(tarefa) {
 }
 
 function contaTarefas(listaTarefas) {
-    //funcao para contar a quantidade de tarefas conforme sao adicionadas na lista e a exibir no texto mensagem_saudacao
     const mensagemSaudacao = document.getElementById('mensagem_saudacao');
     let qtdeTarefas = listaTarefas.children.length;
-    mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + qtdeTarefas + ')';
+
+    //listaTarefas.children.length
+    if (qtdeTarefas === 0) {
+        mensagemSaudacao.textContent = 'Adicione Tarefas!';
+    } else {
+        mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + qtdeTarefas + ')';
+    }
+}
+
+function limparTarefas() {
+    console.log('Limpar Tarefas');
+    let mensagem, cor;
+    //funcao para limpar a lista de tarefas
+    if (limpa()) {
+        console.log('if Limpar Tarefas');
+        listaTarefas.textContent = '';
+        mensagem = 'Tarefas limpas com sucesso!';
+        cor = 'green';
+        contaTarefas(listaTarefas);
+    } else {
+        console.log('else Limpar Tarefas');
+        mensagem = 'Não há tarefas para limpar!';
+        cor = 'red';
+    }
+
+    mensagemElement.textContent = mensagem;
+    mensagemElement.style.color = cor;
+}
+
+function limpa() {
+    console.log('Limpa');
+    return listaTarefas.children.length > 0;
 }
