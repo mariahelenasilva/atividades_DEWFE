@@ -58,6 +58,7 @@ function contaTarefas(listaTarefas) {
     if (qtdeTarefas === 0) {
         mensagemSaudacao.textContent = 'Adicione Tarefas!';
     } else {
+        
         mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + qtdeTarefas + ')';
     }
 }
