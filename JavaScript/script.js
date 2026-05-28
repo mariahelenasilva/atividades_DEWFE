@@ -33,6 +33,8 @@ function adicionarTarefa() {
         //mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + listaTarefas.children.length + ')';
 
         contaTarefas(listaTarefas);
+        botaoLimpa();
+        
     } else {
         mensagem = 'Tarefa inválida, digite um conteúdo!';
         cor = 'red';
@@ -61,6 +63,12 @@ function contaTarefas(listaTarefas) {
         
         mensagemSaudacao.textContent = 'Adicione Tarefas! (Quantidade: ' + qtdeTarefas + ')';
     }
+}
+
+function botaoLimpa() {
+    let botaoLimpa = document.createElement('button');
+    botaoLimpa.textContent = 'Limpar Tarefas';
+    botaoLimpa.onclick = limparTarefas;
 }
 
 function limparTarefas() {
