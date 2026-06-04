@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 40%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #851212;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
