@@ -1,0 +1,15 @@
+/* Definicao de variaveis em escopo global */
+:root {
+  --altura-header: 20vh; /*define altura-header como 20% da viewport*/
+  --altura-article: 30vh; /*define altura-article como 30% da viewport*/
+}
+/* Reset básico (remove espaçamentos e padroniza box model) */
+* {
+  margin: 0; /* remove margem padrão dos elementos */
+  padding: 0; /* remove padding padrão */
+  box-sizing: border-box; /* inclui border/padding no cálculo de
+dimensões */
+}
+body {
+  background-color: #eee; /* cor de fundo da área visível */
+}
