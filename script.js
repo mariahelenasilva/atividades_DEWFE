@@ -1,6 +1,6 @@
 
-let numeros = [2, 5, 7, 75, 0, 49, 82, -4, 13, 6, 10];
-//let numeros = [2, 5, 7, 75, 0, 49, 82, -4, 13, 6, 10, 10];
+//let numeros = [2, 5, 7, 75, 0, 49, 82, -4, 13, 6, 10];
+let numeros = [2, 5, 7, 75, 0, 49, 82, -4, 13, 6, 10, 10];
 let qtdeN = numeros.length;
 
 //1. Par ou impar?
